@@ -100,15 +100,18 @@ function FetchUsers() {
         <table>
           <thead>
             <tr>
-              <th>Avatar</th>
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
+              <th>Avatar</th>
             </tr>
           </thead>
           <tbody>
             {data.map((user) => (
               <tr key={user.id}>
+                <td>{user.first_name}</td>
+                <td>{user.last_name}</td>
+                <td>{user.email}</td>
                 <td>
                   <img
                     src={user.avatar}
@@ -116,9 +119,6 @@ function FetchUsers() {
                     width="50"
                   />
                 </td>
-                <td>{user.first_name}</td>
-                <td>{user.last_name}</td>
-                <td>{user.email}</td>
               </tr>
             ))}
           </tbody>
