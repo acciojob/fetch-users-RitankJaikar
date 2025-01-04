@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function FetchUsers() {
@@ -28,6 +28,10 @@ function FetchUsers() {
         setLoading(false); // End loading
       });
   };
+
+  useEffect(() => {
+    fetchUsers();
+  }, [])
 
   return (
     <div className="fetch-users">
