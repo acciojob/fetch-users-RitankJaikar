@@ -29,9 +29,9 @@ function FetchUsers() {
       });
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, [])
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, [])
 
   return (
     <div className="fetch-users">
@@ -43,6 +43,8 @@ function FetchUsers() {
       {loading && <p>Loading...</p>} {/* Loading state */}
 
       {errorMessage && <p className="error">{errorMessage}</p>} {/* Error or empty list message */}
+
+      {users.length === 0 && <div>No data found</div>}
 
       {users.length > 0 && !loading && (
         <table>
