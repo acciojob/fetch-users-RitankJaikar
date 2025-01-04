@@ -44,7 +44,7 @@ function FetchUsers() {
 
       {errorMessage && <p className="error">{errorMessage}</p>} {/* Error or empty list message */}
 
-      {users.length === 0 && <table><tbody><tr><td>No data found</td></tr></tbody></table>}
+      {users.length === 0 && <table><tbody><tr><td>No data found to display.</td></tr></tbody></table>}
 
       {users.length > 0 && !loading && (
         <table>
